@@ -19,7 +19,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
-import com.example.myapplication.ui_components.MainTopBar
+import com.example.myapplication3.ui.components.MainTopBar
 import com.example.myapplication3.MainViewModel
 import com.example.myapplication3.utils.DrawerEvents
 import com.example.myapplication3.utils.IdArrayList
@@ -30,7 +30,7 @@ import kotlinx.coroutines.launch
 @Composable
 fun MainScreen(mainViewModel: MainViewModel = hiltViewModel(), onClick: (ListItem) -> Unit) {
 
-    var topBarTitle = rememberSaveable { mutableStateOf("Романтика") }
+    var topBarTitle = rememberSaveable { mutableStateOf("Корги") }
 
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val scope = rememberCoroutineScope()

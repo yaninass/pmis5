@@ -55,7 +55,9 @@ fun MainListItem(mainViewModel: MainViewModel = hiltViewModel(), item: ListItem,
 //
 //    }
 
-    ConstraintLayout(modifier = Modifier.fillMaxSize().padding(20.dp)
+    ConstraintLayout(modifier = Modifier.fillMaxSize().padding(20.dp).clickable {
+            Log.d("MainListItem", "Item clicked: ${item.imageName}, ${item.htmlName}")
+               onClick(item)},
     ) {
         val (image, text, fav) = createRefs()
 

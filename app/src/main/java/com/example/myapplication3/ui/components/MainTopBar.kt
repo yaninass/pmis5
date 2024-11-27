@@ -1,5 +1,5 @@
 
-package com.example.myapplication.ui_components
+package com.example.myapplication3.ui.components
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite

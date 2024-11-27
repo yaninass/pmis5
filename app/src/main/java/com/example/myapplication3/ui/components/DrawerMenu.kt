@@ -65,7 +65,7 @@ fun Header() {
                 modifier=Modifier.fillMaxSize(),
                 contentScale = ContentScale.Crop
             )
-            Text(text="Книги",
+            Text(text="Cобаки",
                 modifier = Modifier
                     .fillMaxWidth()
                     .background(PurpleGrey40)

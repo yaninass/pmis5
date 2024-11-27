@@ -13,10 +13,10 @@ import kotlinx.coroutines.launch
 class MainViewModel @Inject constructor( val mainDb: MainDb ):ViewModel() {
     val mainList = mutableStateOf(emptyList<ListItem>())
     private var job: Job? = null
-    fun getAllItemsByCategory(cat: String) {
+    fun getAllItemsByCategory(dog: String) {
         job?.cancel()
         job = viewModelScope.launch {
-            mainDb.dao.getAllItemsByCategory(cat).collect { list ->
+            mainDb.dao.getAllItemsByCategory(dog).collect { list ->
                 mainList.value =
                     list
             }

@@ -5,13 +5,16 @@ import com.example.myapplication3.R
 object IdArrayList {
 
     val listId=listOf(
-        R.array.romantic_books,
-        R.array.fantasy_books,
-        R.array.scientific_books,
-        R.array.detective_books,
-        R.array.historic_books,
-        R.array.biography_books,
-        R.array.adventure_books
+        R.array.corgi,
+        R.array.maltipoo,
+        R.array.taksi,
+        R.array.samoedi,
+        R.array.chihyahya,
+        R.array.shpits,
+        R.array.booldog,
+        R.array.spaniel,
+        R.array.bolonka,
+        R.array.pekines
 
     )
 }

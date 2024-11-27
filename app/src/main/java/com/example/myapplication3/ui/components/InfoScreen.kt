@@ -15,6 +15,8 @@ import androidx.compose.ui.viewinterop.AndroidView
 import com.example.myapplication3.utils.ListItem
 import androidx.compose.ui.Modifier
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -30,7 +32,13 @@ fun InfoScreen (item: ListItem){
         Column(
             modifier = Modifier.fillMaxSize()
         ) {
-//
+            AssetImage(
+                imageName = item.imageName,
+                contentDescription = item.title,
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .height(300.dp)
+            )
             HtmlLoader(htmlName = item.htmlName)
 
         }
@@ -42,14 +50,15 @@ fun HtmlLoader(htmlName: String) {
     var backEnabled by remember { mutableStateOf(false) }
     var webView: WebView? = null
     val context = LocalContext.current
-    val assetManger = context.assets
-    val inputStream = assetManger.open("html/$htmlName")
+    val assetManager = context.assets
+    val inputStream = assetManager.open("html/$htmlName")
     val size = inputStream.available()
     val buffer = ByteArray(size)
     inputStream.read(buffer)
-    val htmlString = String(buffer)
+    val htmlString = String(buffer, Charsets.UTF_8)  // Ensure UTF-8 encoding
 
-    AndroidView(modifier = Modifier.fillMaxSize().padding(5.dp),
+    AndroidView(
+        modifier = Modifier.fillMaxSize().padding(5.dp),
         factory = { context ->
             WebView(context).apply {
                 layoutParams = ViewGroup.LayoutParams(
@@ -57,19 +66,23 @@ fun HtmlLoader(htmlName: String) {
                     ViewGroup.LayoutParams.MATCH_PARENT
                 )
                 webViewClient = object : WebViewClient() {
-                    override fun onPageStarted(view: WebView, url: String?,
-                                               favicon: Bitmap?) {
+                    override fun onPageStarted(view: WebView, url: String?, favicon: Bitmap?) {
+                        backEnabled = view.canGoBack()
+                    }
+
+                    override fun onPageFinished(view: WebView, url: String?) {
                         backEnabled = view.canGoBack()
                     }
                 }
                 settings.javaScriptEnabled = true
-
-                loadData(htmlString, "text/html", "utf-8")
+                settings.allowFileAccessFromFileURLs = true
+                settings.allowUniversalAccessFromFileURLs = true
+                loadData(htmlString, "text/html; charset=UTF-8", null)
                 webView = this
             }
-        }, update = {
-            webView = it
-        })
+        },
+        update = { webView = it }
+    )
 
     BackHandler(enabled = backEnabled) {
         webView?.goBack()

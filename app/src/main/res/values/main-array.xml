@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="book_categories">
+        <item>Корги</item>
+        <item>Мальтипу</item>
+        <item>Таксы</item>
+        <item>Самоеды</item>
+        <item>Чухуахуа</item>
+        <item>Шпицы</item>
+        <item>Французкие бульдоги</item>
+        <item>Кавалер кинг чарльз спаниели</item>
+        <item>Мальтийские болонки</item>
+        <item>Пекинесы</item>
+    </string-array>
+</resources>

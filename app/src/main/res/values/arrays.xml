@@ -1,38 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="romantic_books">
-        <item>Гордость и предубеждение|pride_and_prejudice.jpg|pride_and_prejudice.html</item>
-        <item>Унесенные ветром|gone_with_the_wind.webp|gone_with_the_wind.html</item>
-        <item>Джейн Эйр|jane_eyre.jpg|jane_eyre.html</item>
+    <string-array name="corgi">
+        <item>Корги|corgi.jpg|corgi.html</item>
     </string-array>
-    <string-array name="fantasy_books">
-        <item>Властелин колец|lord_of_the_rings.webp|lord_of_the_rings.html</item>
-        <item>Игра престолов|game_of_thrones.webp|game_of_thrones.html</item>
-        <item>Гарри Поттер и философский камень|harry_potter.jpg|harry_potter.html</item>
+    <string-array name="maltipoo">
+        <item>Мальтипу|maltipoo.jpg|maltipoo.html</item>
     </string-array>
-    <string-array name="scientific_books">
-        <item>Краткая история времени|brief_history_of_time.jpg|brief_history_of_time.html</item>
-        <item>Происхождение видов|origin_of_species.webp|origin_of_species.html</item>
-        <item>Sapiens. Краткая история человечества|brief_history_of_humans.webp|brief_history_of_humans.html</item>
+    <string-array name="taksi">
+        <item>Такса|такса.jpg|taksa.html</item>
     </string-array>
-    <string-array name="detective_books">
-        <item>Убийство в Восточном экспрессе|murder_on_the_orient_express.jpg|murder_on_the_orient_express.html</item>
-        <item>Шерлок Холмс: Этюд в багровых тонах|study_in_scarlet.webp|study_in_scarlet.html</item>
-        <item>Десять негритят|and_then_there_were_none.jpg|and_then_there_were_none.html</item>
+    <string-array name="samoedi">
+        <item>Самоед|самоед.jpg|samoed.html</item>
     </string-array>
-    <string-array name="historic_books">
-        <item>Война и мир|war_and_peace.jpg|war_and_peace.html</item>
-        <item>Добро не оставляйте на потом|do_not_leave_good_for_later.webp|do_not_leave_good_for_later.html</item>
-        <item>Имя розы|name_of_the_rose.webp|name_of_the_rose.html</item>
+    <string-array name="chihyahya">
+        <item>Чихуахуа|чихуахуа.jpg|chixya.html</item>
     </string-array>
-    <string-array name="biography_books">
-        <item>Стив Джобс|steve_jobs.jpg|steve_jobs.html</item>
-        <item>Долгий путь к свободе|long_walk_to_freedom.jpg|long_walk_to_freedom.html</item>
-        <item>Will|will.webp|will.html</item>
+    <string-array name="shpits">
+        <item>Шпицы|шпицы.jpg|spich.html</item>
     </string-array>
-    <string-array name="adventure_books">
-        <item>Робинзон Крузо|robinson_crusoe.jpg|robinson_crusoe.html</item>
-        <item>Вокруг света за 80 дней|around_the_world_in_80_days.jpg|around_the_world_in_80_days.html</item>
-        <item>Остров сокровищ|treasure_island.jpg|treasure_island.html</item>
+    <string-array name="booldog">
+        <item>Французкие бульдоги|бульдог.jpg|booldog.html</item>
+    </string-array>
+    <string-array name="spaniel">
+        <item>Кавалер кинг чарльз спаниели|кавалер.jpg|cavaler.html</item>
+    </string-array>
+    <string-array name="bolonka">
+        <item>Мальтийские болонки|болонка.jpg|bolonka.html</item>
+    </string-array>
+    <string-array name="pekines">
+        <item>Пекинесы|пекинес.jpg|pekines.html</item>
     </string-array>
 </resources>
